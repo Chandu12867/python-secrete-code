@@ -1,0 +1,26 @@
+o=True
+while o==True:
+    z=int(input("enter 1 for code and 0 for decode : "))
+    if z == 1:
+        z=True
+    a=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    b=[]
+    c=[]
+    n=input("enter the text : ")
+    for i in n.lower():
+        b.append(i)
+    s=int(input("enter the shift key : "))
+    for l in b:
+        if l in a:
+            if z == True:
+                r=(a.index(l)+s) % 26
+            else:
+                r=(a.index(l)-s) % 26
+            c.append(a[r])
+        else:
+            c.append(l)    
+    print(b)
+    print(''.join(c))
+    m=int(input("enter 0 for Quit and 1 for continue : "))
+    if m==0 :
+        o=False
